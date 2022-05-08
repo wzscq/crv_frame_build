@@ -15,7 +15,7 @@ git clone https://github.com/wzscq/main_frame.git
 echo build the code ...
 cd main_frame
 npm install
-sed -i  's/host=\"*.*\"/host=\"http:\/\/121.36.222.9\"/' ./public/index.html
+#sed -i  's/host=\"*.*\"/host=\"http:\/\/121.36.222.9\"/' ./public/index.html
 npm run build
 cd ..
 

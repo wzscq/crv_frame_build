@@ -9,6 +9,10 @@ if [ ! -e package ]; then
   mkdir package
 fi
 
+if [ ! -e package/web ]; then
+  mkdir package/web
+fi
+
 echo get code from github
 git clone https://github.com/wzscq/main_frame.git
 
@@ -20,13 +24,11 @@ npm run build
 cd ..
 
 echo remove last pacakge if exist
-if [ -e package/main_frame ]; then
-  rm -rf package/main_frame
+if [ -e package/web/main_frame ]; then
+  rm -rf package/web/main_frame
 fi
 
-
-mv ./main_frame/build ./package/main_frame
-
+mv ./main_frame/build ./package/web/main_frame
 
 rm -rf main_frame
 echo main_frame package build over.

@@ -9,6 +9,10 @@ if [ ! -e package ]; then
   mkdir package
 fi
 
+if [ ! -e package/web ]; then
+  mkdir package/web
+fi
+
 echo get code from github
 git clone https://github.com/wzscq/function_list.git
 
@@ -19,13 +23,11 @@ npm run build
 cd ..
 
 echo remove last pacakge if exist
-if [ -e package/function_list ]; then
-  rm -rf package/function_list
+if [ -e package/web/function_list ]; then
+  rm -rf package/web/function_list
 fi
 
-
-mv ./function_list/build ./package/function_list
-
+mv ./function_list/build ./package/web/function_list
 
 rm -rf function_list
 echo function_list package build over.

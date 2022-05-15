@@ -27,9 +27,7 @@ if [ -e package/frame_service/frame ]; then
   rm -rf package/frame_service/frame
 fi
 
-
 mv ./frame_service/frame ./package/frame_service/frame
-
 
 rm -rf frame_service
 echo frame_service package build over.

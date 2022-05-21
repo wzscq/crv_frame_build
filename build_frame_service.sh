@@ -14,9 +14,9 @@ git clone https://github.com/wzscq/frame_service.git
 
 echo build the code ...
 cd frame_service
-go build
+#添加参数CGO_ENABLED=0，关闭CGO,是为了是编译后的程序可以在alpine中运行
+CGO_ENABLED=0 go build
 cd ..
-
 
 echo remove last pacakge if exist
 if [ ! -e package/frame_service ]; then

@@ -1,13 +1,7 @@
-#syntax=docker/dockerfile:1
-FROM centos:centos7
-
-COPY nginx.repo /etc/yum.repos.d/
+FROM alpine:3.15
+RUN apk add nginx
 COPY nginx.conf /etc/nginx/nginx.conf
-COPY ./package/web /usr/share/nginx/html
-COPY ./package/frame_service /frame_service
-
-RUN yum install -q -y  yum-utils && yum install -q -y nginx
-
-EXPOSE 80/tcp
-
-CMD nginx&&cd /frame_service&&./frame
+ADD ./package/web /web
+ADD ./package/frame_service /frame_service
+copy entrypoint.sh /entrypoint.sh
+ENTRYPOINT ["sh","entrypoint.sh"]

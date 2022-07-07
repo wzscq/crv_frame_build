@@ -22,7 +22,7 @@ npm install
 npm run build
 cd ..
 
-echo remove last pacakge if exist
+echo remove last package if exist
 if [ -e package/web/crv_list_view ]; then
   rm -rf package/web/crv_list_view
 fi

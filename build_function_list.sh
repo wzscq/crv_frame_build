@@ -22,7 +22,7 @@ npm install
 npm run build
 cd ..
 
-echo remove last pacakge if exist
+echo remove last package if exist
 if [ -e package/web/function_list ]; then
   rm -rf package/web/function_list
 fi

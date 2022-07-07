@@ -18,7 +18,7 @@ cd frame_service
 CGO_ENABLED=0 go build
 cd ..
 
-echo remove last pacakge if exist
+echo remove last package if exist
 if [ ! -e package/frame_service ]; then
   mkdir package/frame_service
 fi

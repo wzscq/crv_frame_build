@@ -23,7 +23,7 @@ sed -i  's/host=\"*.*\"/host=\"\"/' ./public/index.html
 npm run build
 cd ..
 
-echo remove last pacakge if exist
+echo remove last package if exist
 if [ -e package/web/main_frame ]; then
   rm -rf package/web/main_frame
 fi
